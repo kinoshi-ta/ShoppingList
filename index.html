@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新しいパソコンの提案</title>
+</head>
+<body>
+
+  <!-- 上部ナビゲーション -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="https://www.google.com" class="nav-title">PC Upgrade Proposal</a>
+      
+      <!-- 三本線メニューボタン -->
+      <button class="menu-btn" id="menuBtn" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- 滑らかに降りてくるメニュー -->
+    <nav class="dropdown-menu" id="dropdownMenu">
+      <div class="dropdown-inner">
+        <div class="dropdown-label">CONTENTS</div>
+        <a href="https://www.google.com">01. 買いたいパソコンについて</a>
+        <a href="https://www.google.com">02. 条件とパソコンでやりたいこと</a>
+        <a href="https://www.google.com">03. その他・お金の計画</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 背景の暗転オーバーレイ -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- タイトル（背景動画付きヒーローエリア） -->
+  <main>
+    <div class="hero-wrapper">
+      <!-- ▼ ここの src="video.mp4" を撮った動画のファイル名に書き換えてください ▼ -->
+      <video class="hero-video" src="video.mp4" autoplay loop muted playsinline></video>
+      
+      <!-- 動画の色味を整えて文字を読みやすくするフィルター -->
+      <div class="hero-gradient"></div>
+
+      <section class="hero">
+        <p class="hero-eyebrow">NEW SETUP PROPOSAL</p>
+        <h1 class="hero-title">新しいパソコンの提案</h1>
+        <p class="hero-subtitle">
+          快適なゲーム体験のために、パソコンの買い替えを検討しています。<br>
+          条件ややりたいことを整理しました。
+        </p>
+      </section>
+    </div>
+
+    <!-- 1, 2, 3 の選択カード -->
+    <section class="menu-section">
+      <div class="card-grid">
+        
+        <!-- 1. 買いたいパソコンについて -->
+        <a href="https://www.google.com" class="card">
+          <div>
+            <div class="card-number">01</div>
+            <h2 class="card-title">買いたいパソコンについて</h2>
+            <p class="card-desc">
+              重要パーツの役割、今のPC（Inspiron 3593）との性能比較、そして解像度やfpsが上がるメリットを詳しく解説します。
+            </p>
+          </div>
+          <div class="card-link">詳しく見る <span>&rsaquo;</span></div>
+        </a>
+
+        <!-- 2. 条件とやりたいこと -->
+        <a href="https://www.google.com" class="card">
+          <div>
+            <div class="card-number">02</div>
+            <h2 class="card-title">条件とパソコンでやりたいこと</h2>
+            <p class="card-desc">
+              英語・数学の勉強や記録に残る挑戦など、私から出せる条件と、Web制作・音楽制作といった将来の活用計画について。
+            </p>
+          </div>
+          <div class="card-link">詳しく見る <span>&rsaquo;</span></div>
+        </a>
+
+        <!-- 3. その他 -->
+        <a href="https://www.google.com" class="card">
+          <div>
+            <div class="card-number">03</div>
+            <h2 class="card-title">その他・お金の計画</h2>
+            <p class="card-desc">
+              現在手元で貯金している金額の報告と、パソコン以外に買いたいもの（エレキギターや服など）の優先順位まとめ。
+            </p>
+          </div>
+          <div class="card-link">詳しく見る <span>&rsaquo;</span></div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created for PC Presentation.</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const header = document.getElementById('header');
+
+    function toggleMenu() {
+      menuBtn.classList.toggle('active');
+      dropdownMenu.classList.toggle('open');
+      menuOverlay.classList.toggle('open');
+      header.classList.toggle('menu-open');
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
+  </script>
+
+</body>
+</html>
